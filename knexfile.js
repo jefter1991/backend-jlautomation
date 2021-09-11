@@ -3,9 +3,16 @@
 module.exports = {
 
   development: {
-    client: 'sqlite3',
+    client: 'mysql2',
     connection: {
-      filename: './src/database/db.sqlite'
+      host:"us-cdbr-east-04.cleardb.com",
+      database:"heroku_4c46b1597d3785e",
+      user:"b28cf082aaa9f7",
+      password:"4410ba3a"
+    },
+    pool:{
+      min:2,
+      max:10
     },
     migrations:{
       directory:'./src/database/migrations'
